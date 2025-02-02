@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app" @click="increment"> {{ count }} </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        const app = createApp({
+            data(){
+                return {
+                    count: 12
+                }
+            },
+            template: `
+                <h1>Count is: {{count}}</h1>
+            `,
+            methods(){ }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+</html>
